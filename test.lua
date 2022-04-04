@@ -26,8 +26,8 @@ while running do
     digOnce()
     digOnce()
     turtle.turnLeft()
-    digArm(3)
-    digArm(2)
-    turtle.turnLeft()
+    digArm(5)
+    digArm(5)
+    turtle.turnRight()
 end
 
