@@ -22,9 +22,12 @@ end
 local running = true
 while running do
     digOnce()
+    digOnce()
+    digOnce()
+    digOnce()
     turtle.turnLeft()
-    digArm(10)
-    digArm(10)
+    digArm(3)
+    digArm(2)
     turtle.turnLeft()
 end
 
