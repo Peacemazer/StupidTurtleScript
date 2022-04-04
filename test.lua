@@ -1,5 +1,5 @@
 local function digOnce()
-    if turtle.detect() then
+    while turtle.detect() do
         turtle.dig()
     end
     turtle.forward()
