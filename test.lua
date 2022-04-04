@@ -3,8 +3,11 @@ local function digOnce()
         turtle.dig()
     end
     turtle.forward()
-    if turtle.detectUp() then
+    while turtle.detectUp() do
         turtle.digUp()
+    end
+    if(turtle.detectDown() then
+        turtle.digDown()
     end
     
 end
