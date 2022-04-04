@@ -1,6 +1,6 @@
 local armLength = 10
 local mineLength = 25
-local currentMineLength
+local currentMineLength = 0
 local function digOnce()
     while turtle.detect() do
         turtle.dig()
