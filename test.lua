@@ -27,6 +27,7 @@ local function digArm(length)
 end
 local function main()
     while currentMineLength < mineLength do
+        print(currentMineLength)
         for i = 1, 4, 1 do
             digOnce()
         end
