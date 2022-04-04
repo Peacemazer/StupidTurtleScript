@@ -1,3 +1,6 @@
+local armLength = 10
+local mineLength = 25
+local currentMineLength
 local function digOnce()
     while turtle.detect() do
         turtle.dig()
@@ -6,15 +9,15 @@ local function digOnce()
     while turtle.detectUp() do
         turtle.digUp()
     end
-    if(turtle.detectDown() then
+    if turtle.detectDown() then
         turtle.digDown()
     end
-    
+
 end
 
-local function digArm (length)
+local function digArm(length)
     for i = 0, length, 1 do
-        digOnce()        
+        digOnce()
     end
     turtle.turnLeft()
     turtle.turnLeft()
@@ -22,15 +25,18 @@ local function digArm (length)
         turtle.forward()
     end
 end
-local running = true
-while running do
-    digOnce()
-    digOnce()
-    digOnce()
-    digOnce()
-    turtle.turnLeft()
-    digArm(5)
-    digArm(5)
-    turtle.turnRight()
+local function main()
+    while currentMineLength < mineLength do
+        for i = 1, 4, 1 do
+            digOnce()
+        end
+        turtle.turnLeft()
+        digArm(armLength)
+        digArm(armLength)
+        turtle.turnRight()
+        currentMineLength = currentMineLength + 1
+    end
 end
+
+main()
 
